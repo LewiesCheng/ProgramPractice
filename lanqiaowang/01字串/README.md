@@ -1,1 +1,1 @@
-<i> This is readme </i>
+<img src="BASIC-2 01字串/QQ截图20151029100047">
