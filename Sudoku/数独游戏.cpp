@@ -1,12 +1,12 @@
 /** Sudoku **/
-//È±µã£ºÖ»ÄÜÇóµ¥Ò»½â
-//´ı¸Ä½ø 
+//ç¼ºç‚¹ï¼šå·²ç»é»˜è®¤æ˜¯æ•°ç‹¬ï¼Œæ²¡æœ‰è®¨è®ºç»™çš„æ•°æ®éæ•°ç‹¬æƒ…å†µ
+//å¾…æ”¹è¿› 
 
 #include <iostream>
 
 using namespace std;
 
-//Êä³ö¹¬¸ñ
+//è¾“å‡ºå®«æ ¼
 void put(char num[][9]){
 	cout << endl;
 	for(int i=0; i < 9; i++){
@@ -18,24 +18,24 @@ void put(char num[][9]){
 	cout << endl;
 }
 
-//¼ì²éÊÇ·ñ·ûºÏÒªÇó
+//æ£€æŸ¥æ˜¯å¦ç¬¦åˆè¦æ±‚
 int check(int i, int j, char num[][9], char figure){
 	
 	int k = 0;
 	
-	//¼ì²éĞĞ
+	//æ£€æŸ¥è¡Œ
 	for(k = 0; k < 9; k++){
 		if(figure == num[i][k])
 			return 0;
 	}
 	
-	//¼ì²éÁĞ
+	//æ£€æŸ¥åˆ—
 	for(k = 0; k < 9; k++){
 		if(figure == num[k][j])
 			return 0;
 	}
 	
-	//¼ì²é¾Å¹¬Àï
+	//æ£€æŸ¥ä¹å®«é‡Œ
 	for(int r=i/3*3; r < i/3*3+3; r++){
 		for(int c=j/3*3; c < j/3*3+3; c++){
 			if(figure == num[r][c])
@@ -45,7 +45,7 @@ int check(int i, int j, char num[][9], char figure){
 	return 1;
 }
 
-//Ìî³ä±í¸ñ 
+//å¡«å……è¡¨æ ¼ 
 int fill_form(int i, int j,char num[][9]){
 	if(i==9 && j==0){
 		put(num);
